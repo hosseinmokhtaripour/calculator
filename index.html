@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>ماشین حساب</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="visual" viewBox="0 0 900 600" version="1.1"><rect x="0" y="0" width="100vw" height="100vh" fill="#001220"/><defs><linearGradient id="grad1_0" x1="33.3%" y1="100%" x2="100%" y2="0%"><stop offset="20%" stop-color="#001220" stop-opacity="1"/><stop offset="80%" stop-color="#001220" stop-opacity="1"/></linearGradient></defs><defs><linearGradient id="grad2_0" x1="0%" y1="100%" x2="66.7%" y2="0%"><stop offset="20%" stop-color="#001220" stop-opacity="1"/><stop offset="80%" stop-color="#001220" stop-opacity="1"/></linearGradient></defs><g transform="translate(900, 600)"><path d="M-405.6 0C-372.7 -43.6 -339.8 -87.2 -319.7 -132.4C-299.5 -177.6 -292.2 -224.3 -268 -268C-243.8 -311.7 -202.7 -352.3 -155.2 -374.7C-107.7 -397.2 -53.9 -401.4 0 -405.6L0 0Z" fill="#94b2f2"/></g><g transform="translate(0, 0)"><path d="M405.6 0C372.8 43.1 340 86.2 321.5 133.2C303.1 180.1 299 230.9 274.4 274.4C249.7 317.8 204.4 354.1 155.2 374.7C106.1 395.4 53 400.5 0 405.6L0 0Z" fill="#94b2f2"/></g></svg>
+      <div class="container">
+        <form class="calculator" name="cal">
+          <input type="text" readonly class="value" name="text" />
+          <span class="num clear" onclick="document.cal.text.value = ''">C</span>
+          <span class="num" onclick="document.cal.text.value += '/'">/</span>
+          <span class="num" onclick="document.cal.text.value += '*'">*</span>
+          <span class="num" onclick="document.cal.text.value += '7'">7</span>
+          <span class="num" onclick="document.cal.text.value += '8'">8</span>
+          <span class="num" onclick="document.cal.text.value += '9'">9</span>
+          <span class="num" onclick="document.cal.text.value += '-'">-</span>
+          <span class="num" onclick="document.cal.text.value += '4'">4</span>
+          <span class="num" onclick="document.cal.text.value += '5'">5</span>
+          <span class="num" onclick="document.cal.text.value += '6'">6</span>
+          <span class="num plus" onclick="document.cal.text.value += '+'">+</span>
+          <span class="num" onclick="document.cal.text.value += '1'">1</span>
+          <span class="num" onclick="document.cal.text.value += '2'">2</span>
+          <span class="num" onclick="document.cal.text.value += '3'">3</span>
+          <span class="num" onclick="document.cal.text.value += '0'">0</span>
+          <span class="num" onclick="document.cal.text.value += '00'">00</span>
+          <span class="num" onclick="document.cal.text.value += '.'">.</span>
+          <span class="num equal" onclick="document.cal.text.value = eval(cal.text.value)">=</span>
+        </form>
+      </div>
+      <script type="text/javascript" src="vanilla-tilt.js"></script>
+      <script type="text/javascript">
+      	VanillaTilt.init(document.querySelector(".container"), {
+      		max: 15,
+      		speed: 400,
+          glare: true,
+          "max-glare": 0.2,
+      	});
+      </script>
+    </body>
+<html>
